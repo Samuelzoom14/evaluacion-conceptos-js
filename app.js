@@ -43,7 +43,6 @@ let peso = parseInt(prompt("Ingrese su peso en Kg"))
 let altura = parseInt(prompt("Ingrese su altura en metros"))
 
 imc = parseInt(peso / (altura^2))
-console.log(imc)
 
 if(imc<18.5){
     alert("Bajo de peso")
@@ -57,9 +56,22 @@ if(imc>=25 && imc<=29.9){
 if(imc>30){
     alert("Obesidad")
 }
+
+
+
+
+let dias = ["Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado", "Domingo"]
+let i 
+
+for(i = 0; i<dias.length; i++){
+    if(i<5){
+        console.log(dias[i])
+    }
+    if(i === 5 || i === 6){
+        console.log(dias[i] + " Fin de semana!")
+    }
+}
 */
-
-
 
 
 

@@ -71,7 +71,60 @@ for(i = 0; i<dias.length; i++){
         console.log(dias[i] + " Fin de semana!")
     }
 }
-*/
 
 
 
+
+let carrito = []
+let articulo, cantidad, precio, suma = 0;
+
+articulo = prompt("Ingresa un articulo")
+
+while(articulo !== "0"){
+    cantidad = parseInt(prompt("Ingresa la cantidad"))
+    precio = parseInt(prompt("Ingresa el precio"))
+    carrito.push(articulo)
+    suma = suma + (precio * cantidad)
+    articulo = prompt("Ingresa un articulo")
+}
+console.log(`************************************\n
+FACTURA A - Número XXXXXXX-XXXXXXX-X\n
+    Ítems:
+    - ${carrito[0]}\n
+    - ${carrito[1]}\n
+    - ${carrito[2]}\n
+    
+    Total a facturar: $${suma}\n
+    ************************************`)
+    
+    
+
+let carrito = []
+let articulo, cantidad, precio, suma = 0, editar, cambio, nArticulo;
+
+articulo = prompt("Ingresa un articulo")
+
+while(articulo !== "0"){
+    cantidad = parseInt(prompt("Ingresa la cantidad"))
+    precio = parseInt(prompt("Ingresa el precio"))
+    carrito.push(articulo)
+    suma = suma + (precio * cantidad)
+    articulo = prompt("Ingresa un articulo")
+}
+editar = prompt("Quieres editar")
+while(editar === "si"){
+    cambio = parseInt(prompt("Ingrese el numero del articulo a modificar"))
+    nArticulo = prompt("Ingrese el nuevo articulo")
+    carrito[cambio] = nArticulo
+    editar = prompt("Quieres seguir editando?")
+}
+console.log(`************************************\n
+FACTURA A - Número XXXXXXX-XXXXXXX-X\n
+    Ítems:
+    - ${carrito[0]}\n
+    - ${carrito[1]}\n
+    - ${carrito[2]}\n
+    
+    Total a facturar: $${suma}\n
+    ************************************`)
+    */
